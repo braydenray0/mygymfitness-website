@@ -7,7 +7,7 @@
 <link rel="icon" href="/img/favicon-32.png">
 <script>
   /* old Squarespace addresses that have a new home */
-  (function () { var p = location.pathname.replace(/\/+$/, '').toLowerCase(), to = { '/help': '/contact', '/support': '/contact', '/how-it-works': '/features', '/manage': '/owners' }[p];
+  (function () { var p = location.pathname.replace(/\/+$/, '').toLowerCase(), to = { '/help': '/contact', '/support': '/contact', '/how-it-works': '/features', '/manage': '/owners' }[p] || {"privacy-policy": "https://app.mygymfitness.us/privacy", "privacy": "https://app.mygymfitness.us/privacy", "terms": "https://app.mygymfitness.us/terms", "terms-of-use": "https://app.mygymfitness.us/terms", "terms-and-conditions": "https://app.mygymfitness.us/terms", "delete-account": "https://app.mygymfitness.us/delete-account"}[p.slice(1)];
     if (to) location.replace(to + location.search + location.hash); })();
 </script>
 <style>
