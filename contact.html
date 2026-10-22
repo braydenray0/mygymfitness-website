@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · MyGymFitness</title>
+<meta name="description" content="Contact MyGymFitness. Send us a message and we will get back to you.">
+<meta property="og:title" content="Contact · MyGymFitness">
+<meta property="og:description" content="Contact MyGymFitness. Send us a message and we will get back to you.">
+<meta property="og:image" content="https://www.mygymfitness.us/img/share-card.png">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="MyGymFitness home"><img src="img/logo.png" alt="" width="32" height="32">MyGymFitness</a>
+    <nav class="nav-links" id="site-menu" aria-label="Main">
+      <a href="features.html">Features</a>
+      <a href="owners.html">Owners</a>
+      <a href="partners.html">Partners</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <div class="nav-acts"><a class="nav-login" href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a><a class="nav-book" href="book-a-trial.html">Book a trial</a></div>
+    </nav>
+    <button class="nav-search" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-expanded="false" aria-controls="site-search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary" href="book-a-trial.html">Book a trial</a>
+    </div>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<script>/* mb-early: header classes before first paint */(function(n){if(!n)return;n.classList.add('js-menu','js-search');var s=n.querySelector('.nav-search'),c=n.querySelector('.nav-cta');if(s&&c&&window.matchMedia&&matchMedia('(max-width: 1023px)').matches)c.parentNode.insertBefore(s,c.nextSibling);addEventListener('load',function(){if(!window.__mbReady)n.classList.remove('js-menu','js-search');});})(document.querySelector('header.nav'));</script>
+
+<main id="top">
+  <section id="sr-contact-1" class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1>Talk to us</h1>
+      <div class="cf-switch" id="cf-switch" role="tablist" aria-label="What do you need?" hidden>
+        <button type="button" role="tab" id="cf-tab-help" aria-controls="cf-help" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l1-4.4A8.5 8.5 0 1 1 20.5 12z"/></svg><span>Get help</span></button>
+        <button type="button" role="tab" id="cf-tab-refer" aria-controls="refer" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="8.5" width="17" height="12" rx="1.5"/><path d="M2.5 8.5h19v4h-19zM12 8.5v12M12 8.5c-1.5-3.5-6-4.5-6-1.5 0 1.5 2.5 1.5 6 1.5zM12 8.5c1.5-3.5 6-4.5 6-1.5 0 1.5-2.5 1.5-6 1.5z"/></svg><span>Refer a gym, get $500</span></button>
+      </div>
+      <div class="cf-panel" id="cf-help" role="tabpanel" aria-labelledby="cf-tab-help">
+        <p class="rf-line">Questions, or trouble getting into your account? Send us a message.</p>
+        <form class="card contact-form rf-form" id="contact-form" novalidate>
+          <fieldset>
+            <legend>About you</legend>
+            <div class="row2">
+              <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" required></div>
+              <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>How can we help?</legend>
+            <div class="field"><label for="c-msg">Details</label><textarea id="c-msg" name="message" rows="5" required></textarea></div>
+          </fieldset>
+          <div class="hp-field" aria-hidden="true"><label>Leave this empty <input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-msg" id="contact-msg" hidden></p>
+        </form>
+      </div>
+      <div class="cf-panel cf-refer" id="refer" role="tabpanel" aria-labelledby="refer-title">
+        <h2 id="refer-title">Refer a gym, <em>get $500.</em></h2>
+        <p class="rf-line">Know a gym owner who should be on MyGymFitness? Tell us who they are and we'll reach out.</p>
+        <form class="card rf-form" id="refer-form" novalidate>
+          <fieldset>
+            <legend>About you</legend>
+            <div class="row2">
+              <div class="field"><label for="r-name">Your name</label><input id="r-name" name="your_name" autocomplete="name" required></div>
+              <div class="field"><label for="r-email">Your email</label><input id="r-email" name="your_email" type="email" autocomplete="email" required></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>About the gym</legend>
+            <div class="row2">
+              <div class="field"><label for="r-gym">Gym name</label><input id="r-gym" name="gym_name" autocomplete="off" required></div>
+              <div class="field"><label for="r-city">City and state</label><input id="r-city" name="gym_city_state" autocomplete="off" required></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="r-owner">Gym owner's name</label><input id="r-owner" name="owner_name" autocomplete="off" required></div>
+              <div class="field"><label for="r-oemail">Gym owner's email</label><input id="r-oemail" name="owner_email" type="email" autocomplete="off" required></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="r-phone">Owner's phone <span class="rf-opt">(optional)</span></label><input id="r-phone" name="owner_phone" type="tel" autocomplete="off"></div>
+              <div class="field"><label for="r-how">How do you know them?</label><select id="r-how" name="relationship" required><option value="">Choose one</option><option>I'm a member there</option><option>I work there</option><option>Friend or family</option><option>Another gym owner</option><option>Other</option></select></div>
+            </div>
+            <div class="field rf-other" id="r-other-wrap" hidden><label for="r-other">Tell us how you know them</label><input id="r-other" name="relationship_other" autocomplete="off"></div>
+            <div class="field"><label for="r-notes">Anything else we should know? <span class="rf-opt">(optional)</span></label><textarea id="r-notes" name="notes" rows="3" placeholder="For example: what they use now, or the best time to reach them"></textarea></div>
+          </fieldset>
+          <div class="hp-field" aria-hidden="true"><label>Leave this empty <input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn-primary" type="submit" style="justify-self:start">Send referral</button>
+          <p class="form-msg" id="refer-msg" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:12px;align-content:start">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="" width="32" height="32">MyGymFitness</a>
+      <p>Membership, classes, workouts, and door access in one place.</p>
+    </div>
+    <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="owners.html">For gym owners</a></li></ul></div>
+    <div><h4>Gym owners</h4><ul><li><a href="book-a-trial.html">Book a trial</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+    <div><h4>Members</h4><ul><li><a href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a></li><li><a href="contact.html">Contact us</a></li><li><a href="https://app.mygymfitness.us/join" target="_blank" rel="noopener">Join a gym</a></li><li><a href="https://app.mygymfitness.us/privacy" target="_blank" rel="noopener">Privacy</a></li><li><a href="https://app.mygymfitness.us/terms" target="_blank" rel="noopener">Terms</a></li></ul></div>
+    <p class="legal">© 2026 LeanBizSolutions LLC. MyGymFitness is operated by LeanBizSolutions LLC.</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

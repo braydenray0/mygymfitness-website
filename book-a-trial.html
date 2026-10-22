@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a trial · MyGymFitness</title>
+<meta name="description" content="Book a trial of MyGymFitness for your gym. New gyms are set up by invite.">
+<meta property="og:title" content="Book a trial · MyGymFitness">
+<meta property="og:description" content="Book a trial of MyGymFitness for your gym. New gyms are set up by invite.">
+<meta property="og:image" content="https://www.mygymfitness.us/img/share-card.png">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="MyGymFitness home"><img src="img/logo.png" alt="" width="32" height="32">MyGymFitness</a>
+    <nav class="nav-links" id="site-menu" aria-label="Main">
+      <a href="features.html">Features</a>
+      <a href="owners.html">Owners</a>
+      <a href="partners.html">Partners</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <div class="nav-acts"><a class="nav-login" href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a><a class="nav-book" href="book-a-trial.html">Book a trial</a></div>
+    </nav>
+    <button class="nav-search" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-expanded="false" aria-controls="site-search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary" href="book-a-trial.html" aria-current="page">Book a trial</a>
+    </div>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<script>/* mb-early: header classes before first paint */(function(n){if(!n)return;n.classList.add('js-menu','js-search');var s=n.querySelector('.nav-search'),c=n.querySelector('.nav-cta');if(s&&c&&window.matchMedia&&matchMedia('(max-width: 1023px)').matches)c.parentNode.insertBefore(s,c.nextSibling);addEventListener('load',function(){if(!window.__mbReady)n.classList.remove('js-menu','js-search');});})(document.querySelector('header.nav'));</script>
+
+<main id="top">
+  <section id="sr-book-a-trial-1" class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Book a trial</span>
+      <h1>Ready to put your gym in your pocket?</h1>
+      <p class="lede">New gyms are set up by invite. Tell us about your gym to book your trial.</p>
+      <form class="card page-form" id="demo-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-gym">Gym name</label><input id="f-gym" name="gym" required></div>
+        </div>
+        <div class="row2 ct-row">
+          <div class="field"><label for="f-city">City</label><input id="f-city" name="city" autocomplete="address-level2" required></div>
+          <div class="field"><label for="f-state">State</label><input id="f-state" name="state" autocomplete="address-level1" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-members">Members today</label>
+            <select id="f-members" name="members"><option>Under 150</option><option>150 to 400</option><option>400 to 1,000</option><option>Over 1,000</option></select></div>
+          <div class="field"><label for="f-hours">Hours</label>
+            <select id="f-hours" name="hours"><option>Open 24/7</option><option>Staffed hours only</option><option>Both</option></select></div>
+        </div>
+        <div class="hp-field" aria-hidden="true"><label>Leave this empty <input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn btn-primary" type="submit" style="justify-self:start">Book my trial</button>
+        <p class="form-msg" id="form-msg" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:12px;align-content:start">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="" width="32" height="32">MyGymFitness</a>
+      <p>Membership, classes, workouts, and door access in one place.</p>
+    </div>
+    <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="owners.html">For gym owners</a></li></ul></div>
+    <div><h4>Gym owners</h4><ul><li><a href="book-a-trial.html">Book a trial</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+    <div><h4>Members</h4><ul><li><a href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a></li><li><a href="contact.html">Contact us</a></li><li><a href="https://app.mygymfitness.us/join" target="_blank" rel="noopener">Join a gym</a></li><li><a href="https://app.mygymfitness.us/privacy" target="_blank" rel="noopener">Privacy</a></li><li><a href="https://app.mygymfitness.us/terms" target="_blank" rel="noopener">Terms</a></li></ul></div>
+    <p class="legal">© 2026 LeanBizSolutions LLC. MyGymFitness is operated by LeanBizSolutions LLC.</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

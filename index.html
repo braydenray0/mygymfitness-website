@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MyGymFitness</title>
+<meta name="description" content="MyGymFitness handles sign-ups, billing, and 24/7 door access, so gym owners can spend their time growing their gym.">
+<meta property="og:title" content="MyGymFitness">
+<meta property="og:description" content="Membership, classes, workouts, and door access in one place. Built for independent gyms, with door access that follows billing.">
+<meta property="og:image" content="https://www.mygymfitness.us/img/share-card.png">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="MyGymFitness home"><img src="img/logo.png" alt="" width="32" height="32">MyGymFitness</a>
+    <nav class="nav-links" id="site-menu" aria-label="Main">
+      <a href="features.html">Features</a>
+      <a href="owners.html">Owners</a>
+      <a href="partners.html">Partners</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <div class="nav-acts"><a class="nav-login" href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a><a class="nav-book" href="book-a-trial.html">Book a trial</a></div>
+    </nav>
+    <button class="nav-search" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-expanded="false" aria-controls="site-search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a>
+      <a class="btn btn-primary" href="book-a-trial.html">Book a trial</a>
+    </div>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<script>/* mb-early: header classes before first paint */(function(n){if(!n)return;n.classList.add('js-menu','js-search');var s=n.querySelector('.nav-search'),c=n.querySelector('.nav-cta');if(s&&c&&window.matchMedia&&matchMedia('(max-width: 1023px)').matches)c.parentNode.insertBefore(s,c.nextSibling);addEventListener('load',function(){if(!window.__mbReady)n.classList.remove('js-menu','js-search');});})(document.querySelector('header.nav'));</script>
+
+<main id="top">
+  <section id="sr-home-5" class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">For independent gyms</span>
+        <h1>We handle the <span class="nowrap">day-to-day.</span> <em>You grow your gym.</em></h1>
+        <p class="lede">Sign-ups, payments, and 24/7 door access that run on their own.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="book-a-trial.html">Book a trial</a>
+          <a class="btn btn-ghost" href="owners.html">For gym owners</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="phone" src="img/phone-member-home-dark.webp" width="620" height="1219" alt="Member home screen with the Unlock Gym and My Door Code buttons, Flex Points streak, gym shop and guest pass">
+        <div class="door" aria-label="Example entries log">
+          <div class="door-head"><span>Entries · today</span><span class="live">Live</span></div>
+          <ul class="log" id="log">
+            <li><time>5:12 AM</time><span class="who">Dana W.<span class="why">App unlock</span></span><span class="tag ok">In</span></li>
+            <li><time>5:09 AM</time><span class="who">Grant V.<span class="why">Keypad</span></span><span class="tag ok">In</span></li>
+            <li><time>4:58 AM</time><span class="who">Erin W.<span class="why">Membership on hold</span></span><span class="tag deny">Refused</span></li>
+            <li><time>4:47 AM</time><span class="who">Maya I.<span class="why">Door code</span></span><span class="tag ok">In</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sr-home-6" class="block hw-own" aria-labelledby="hw-own-title">
+    <div class="wrap">
+      <div class="hx-head">
+        <span class="eyebrow">For owners</span>
+        <h2 id="hw-own-title">Your gym, your way.</h2>
+      </div>
+      <ul class="fq-tiles">
+        <li id="sr-home-1" class="fq-tile">
+          <div class="fq-art" role="img" aria-label="A monthly plan with an edit pencil, plus the gym's own contract, setup fee and cancel policy">
+            <div class="fq-ui">
+              <div class="fq-plan"><b>Single Membership</b><span class="fq-price">Monthly</span><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5l4 4M4.5 19.5l1-4.5L16 4.5a2.1 2.1 0 0 1 3 3L8.5 18z"/></svg></div>
+              <div class="fq-chips">
+                <span><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Contract</span>
+                <span><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Setup fee</span>
+                <span><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Cancel policy</span>
+              </div>
+            </div>
+          </div>
+          <h3 class="fq-label">Your prices</h3>
+          <p class="fq-line">You set plans, prices, and policies.</p>
+        </li>
+        <li id="sr-home-2" class="fq-tile">
+          <div class="fq-art fq-art-phone" role="img" aria-label="The member app with the Summit Fitness name and logo at the top and a small Powered by MyGymFitness line under it">
+            <div class="fq-phone">
+              <div class="fq-phone-top"><span>9:41</span><i></i><span class="fq-batt"></span></div>
+              <div class="fq-brand"><span class="fq-mark"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 19l6.5-10 3.6 5.2L15 11l6.5 8z" fill="currentColor"/></svg></span><b>Summit Fitness</b></div>
+              <small class="fq-powered">Powered by MyGymFitness</small>
+              <span class="fq-unlock"><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock Gym</span>
+            </div>
+          </div>
+          <h3 class="fq-label">Your brand</h3>
+          <p class="fq-line">Members see your name and logo.</p>
+        </li>
+        <li id="sr-home-3" class="fq-tile">
+          <div class="fq-art" role="img" aria-label="A gym door with the controller and keypad installed beside it, marked done">
+            <svg class="fq-door" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
+              <path class="fq-d-floor" d="M14 116h192"/>
+              <rect class="fq-d-frame" x="44" y="10" width="80" height="106" rx="3"/>
+              <rect class="fq-d-leaf" x="50" y="16" width="68" height="100" rx="2"/>
+              <rect class="fq-d-pane" x="60" y="27" width="48" height="30" rx="2"/>
+              <rect class="fq-d-strike" x="119" y="56" width="5" height="22" rx="1.5"/>
+              <path class="fq-d-handle" d="M111 68h-10"/>
+              <circle class="fq-d-knob" cx="111" cy="68" r="3"/>
+              <path class="fq-d-wire" d="M146 92h-12V67h-10"/>
+              <rect class="fq-d-pad" x="146" y="36" width="40" height="64" rx="7"/>
+              <circle class="fq-d-led" cx="166" cy="47" r="3.2"/>
+              <g class="fq-d-keys">
+                <circle cx="157" cy="61" r="2.4"/><circle cx="166" cy="61" r="2.4"/><circle cx="175" cy="61" r="2.4"/>
+                <circle cx="157" cy="71" r="2.4"/><circle cx="166" cy="71" r="2.4"/><circle cx="175" cy="71" r="2.4"/>
+                <circle cx="157" cy="81" r="2.4"/><circle cx="166" cy="81" r="2.4"/><circle cx="175" cy="81" r="2.4"/>
+                <circle cx="166" cy="91" r="2.4"/>
+              </g>
+              <circle class="fq-d-badge" cx="188" cy="34" r="12"/>
+              <path class="fq-d-check" d="M182.5 34.5l3.8 3.8 7.2-7.6"/>
+            </svg>
+          </div>
+          <h3 class="fq-label">We install it</h3>
+          <p class="fq-line">We set up the controller on your door.</p>
+        </li>
+        <li id="sr-home-4" class="fq-tile">
+          <div class="fq-art" role="img" aria-label="No keys needed: one member gets in by app unlock and another with a QR code">
+            <div class="fq-ui">
+              <span class="fq-offline fq-keyless"><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 20 3M16.5 6.5l2.5 2.5M14 9l2 2"/></svg>No keys</span>
+              <div class="fq-entry"><span class="fq-who">Grant V.<small>App unlock</small></span><span class="fq-pill">In</span></div>
+              <div class="fq-entry"><span class="fq-who">Maya I.<small>QR code</small></span><span class="fq-pill">In</span></div>
+            </div>
+          </div>
+          <h3 class="fq-label">Keyless entry</h3>
+          <p class="fq-line">Members get in with the app or a QR code.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sr-home-7" class="block tu" aria-labelledby="tu-title">
+    <div class="wrap tu-wrap">
+      <div class="tu-stage" role="img" aria-label="The member app's home screen at Summit Fitness. A member taps the big Unlock Gym button, it turns green and says Unlocked, and the entries log shows Dana W. let in by app unlock.">
+        <div class="tu-phone" aria-hidden="true">
+          <div class="tu-screen">
+            <div class="tu-status"><b>9:41</b><span class="tu-notch"></span><span class="tu-sys"><span class="tu-bars"><i></i><i></i><i></i><i></i></span><svg class="tu-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.8 12.4a9.3 9.3 0 0 1 12.4 0M9.1 15.8a4.6 4.6 0 0 1 5.8 0"/><circle cx="12" cy="19" r="1.2" fill="currentColor" stroke="none"/></svg><span class="tu-batt"><i></i></span></span></div>
+            <div class="tu-body">
+            <div class="tu-head">
+              <span class="tu-logo">S</span>
+              <span class="tu-gym"><b>Summit Fitness</b><small>Powered by MyGymFitness</small></span>
+              <svg class="tu-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            </div>
+            <div class="tu-flex">
+              <span class="tu-flex-pts"><svg viewBox="0 0 24 24"><path d="M7 20c-2-1-3-3-3-5 0-4 4-5 4-9 2 1 3 3 3 5 1-1 1.5-2 1.5-3 3 2 4.5 5 4.5 8 0 3-2 4-4 4"/></svg><b>375</b> Flex Points</span>
+              <span class="tu-streak"><svg viewBox="0 0 24 24"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 1.5.8 2.5 2 3 0-3-1-5.5 1-8.5z"/></svg>Day 7 streak</span>
+            </div>
+            <div class="tu-card">
+              <div class="tu-btn">
+                <span class="tu-btn-face tu-btn-lock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Unlock Gym</span>
+                <span class="tu-btn-face tu-btn-open"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.7-1.5"/></svg>Unlocked</span>
+                <span class="tu-tap"></span>
+              </div>
+              <div class="tu-code"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l2.5 2.5M14.5 8.5l2 2"/></svg>My Door Code</div>
+            </div>
+            <div class="tu-tiles">
+              <span><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/><path d="M2.5 3.5h3l2.6 12h11l2-8H6.6"/></svg>Gym Shop</span>
+              <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.7.8 2.8 2.6 3 5.2"/></svg>Guest Pass</span>
+            </div>
+            <div class="tu-next">
+              <span class="tu-next-ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+              <span class="tu-next-txt"><small>Next class</small><b>Spin class</b><span>Today · 6:00 PM</span></span>
+              <span class="tu-next-tag">Booked</span>
+            </div>
+            <div class="tu-tiles">
+              <span class="tu-peek"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span>
+              <span class="tu-peek"><svg viewBox="0 0 24 24"><path d="M4 5h11v8H8l-4 3zM15 9h5v8l-3-2.5h-6.5V13"/></svg></span>
+            </div>
+            </div>
+            <nav class="tu-tabs">
+              <span class="tu-on"><svg viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-6h-5v6H4z"/></svg>Home</span>
+              <span><svg viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M4 9l5-5M15 20l5-5M2.5 10.5l1.5 1.5M12 2.5l1.5 1.5M10.5 21.5l1.5-1.5M20 12l1.5-1.5"/></svg>Fitness Log</span>
+              <span><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Calendar</span>
+              <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5c1.2-2.2 3.2-3.3 5.5-3.3s4.3 1.1 5.5 3.3"/></svg>My Profile</span>
+            </nav>
+            <span class="tu-home-bar"></span>
+          </div>
+        </div>
+        <div class="tu-toast" aria-hidden="true"><span class="tu-toast-head">Entries</span>
+          <span class="tu-toast-ic"><svg viewBox="0 0 24 24"><path d="M6.5 20.5V4.5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M4 20.5h16"/><circle cx="14.5" cy="12.5" r=".9" fill="currentColor" stroke="none"/></svg></span>
+          <span class="tu-toast-txt"><b>Dana W.</b><small>App unlock · now</small></span>
+          <span class="tu-toast-tag">In</span>
+        </div>
+      </div>
+      <div class="tu-copy">
+        <span class="eyebrow">Tap to unlock</span>
+        <h2 id="tu-title">One tap. <em>The door opens.</em></h2>
+        <p class="tu-line">Members unlock the gym right from the app. Most gyms can't do that.</p>
+        <p class="dl-label">Download here</p>
+        <div class="dl-stores">
+          <a class="dl-store" href="https://apps.apple.com/us/app/mygymfitness/id1577201858" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="2.5" width="12" height="19" rx="2.6"/><path d="M10.5 18.5h3"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="dl-store" href="https://play.google.com/store/search?q=mygymfitness&amp;c=apps&amp;hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.2v15.6a.9.9 0 0 0 1.37.77l12.2-7.8a.9.9 0 0 0 0-1.54L8.37 3.43A.9.9 0 0 0 7 4.2z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sr-home-8" class="hm-switch" aria-labelledby="fq-switch-title">
+    <div class="wrap">
+      <div class="fq-switch sw">
+        <div class="fq-switch-head sw-head">
+          <div class="sw-titles">
+            <span class="eyebrow">Switching over</span>
+            <h2 id="fq-switch-title">Setup is on us.</h2>
+          </div>
+          <button class="sw-play" type="button" aria-label="Pause the steps animation" hidden>
+            <svg class="sw-i-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4.2" height="14" rx="1.2"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.2"/></svg>
+            <svg class="sw-i-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.6v12.8a1 1 0 0 0 1.5.86l10.2-6.4a1 1 0 0 0 0-1.72L9.5 4.74A1 1 0 0 0 8 5.6z"/></svg>
+          </button>
+        </div>
+
+        <ol class="sw-track" aria-labelledby="fq-switch-title">
+          <li class="sw-step">
+            <span class="sw-node"><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+            <h3 class="sw-name"><span class="sw-num" aria-hidden="true">01</span>Call</h3>
+            <p class="sw-line">We go over plans and door setup.</p>
+            <span class="sw-seg" aria-hidden="true"><i class="sw-fill"></i></span>
+          </li>
+          <li class="sw-step">
+            <span class="sw-node"><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="7" height="9" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.5"/><rect x="13.5" y="11.5" width="7" height="9" rx="1.5"/><rect x="3.5" y="15.5" width="7" height="5" rx="1.5"/></svg></span>
+            <h3 class="sw-name"><span class="sw-num" aria-hidden="true">02</span>Set up</h3>
+            <p class="sw-line">Dashboard ready in about 2 minutes.</p>
+            <span class="sw-seg" aria-hidden="true"><i class="sw-fill"></i></span>
+          </li>
+          <li class="sw-step">
+            <span class="sw-node"><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 10h3V7L6.5 3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1-3 3l-6-6a6 6 0 0 1-8-8z"/></svg></span>
+            <h3 class="sw-name"><span class="sw-num" aria-hidden="true">03</span>Install</h3>
+            <p class="sw-line">We install your door controller.</p>
+            <span class="sw-seg" aria-hidden="true"><i class="sw-fill"></i></span>
+          </li>
+          <li class="sw-step">
+            <span class="sw-node"><svg class="fq-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 15l6-6M11 6l.5-.5a5 5 0 0 1 7 7l-.5.5M13 18l-.4.5a5 5 0 0 1-7-7l.5-.5"/></svg></span>
+            <h3 class="sw-name"><span class="sw-num" aria-hidden="true">04</span>Invite</h3>
+            <p class="sw-line">Members join from your link.</p>
+          </li>
+        </ol>
+
+        <div class="sw-stage" aria-hidden="true">
+          <span class="sw-rail"><span class="sw-beam"></span></span>
+
+          <!-- 01 Call: a call from MyGymFitness, the topics tick off as they come up -->
+          <div class="sw-scene sw-s-call">
+            <div class="sw-art">
+              <div class="sw-card sw-call">
+                <span class="sw-av"><i class="sw-ring"></i><i class="sw-ring sw-ring-b"></i><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+                <span class="sw-call-txt"><small>Setup call</small><b>MyGymFitness</b><span class="sw-status"><span class="sw-st sw-st-a">Calling…</span><span class="sw-st sw-st-b">On call</span></span></span>
+                <span class="sw-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+              <span class="sw-dash"></span>
+              <div class="sw-chips">
+                <span class="sw-chip"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.1 6.1a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8.2" cy="8.2" r="1.5"/></svg>Plans<i class="sw-tick"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></span>
+                <span class="sw-chip"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M12 3v18M16.5 7.6c-.8-1.4-2.4-2.1-4.5-2.1-2.6 0-4.3 1.3-4.3 3.1 0 4.6 9 2.4 9 7 0 2-1.9 3.2-4.7 3.2-2.2 0-4-.9-4.8-2.4"/></svg>Pricing<i class="sw-tick"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></span>
+                <span class="sw-chip"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M7 3.5h7l4.5 4.5v12a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5zM14 3.5V8h4.5M9.5 12.5h5M9.5 16h5"/></svg>Policies<i class="sw-tick"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></span>
+                <span class="sw-chip"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M6 20.5V4.5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16M3.5 20.5h17M14.5 12h.01"/></svg>Door<i class="sw-tick"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></span>
+              </div>
+            </div>
+            <p class="sw-cap"><b>Call</b><span>We go over plans and door setup.</span></p>
+          </div>
+
+          <!-- 02 Set up: the dashboard comes up, ready for plans -->
+          <div class="sw-scene sw-s-setup">
+            <div class="sw-art">
+              <div class="sw-clock">
+                <svg viewBox="0 0 120 120" focusable="false"><circle class="sw-clock-bg" cx="60" cy="60" r="52"/><circle class="sw-clock-fg" cx="60" cy="60" r="52" pathLength="100" transform="rotate(-90 60 60)"/></svg>
+                <span class="sw-clock-txt"><small>About</small><b>2</b><small>min</small></span>
+              </div>
+              <div class="sw-card sw-win">
+                <div class="sw-win-bar"><i></i><i></i><i></i><span>Summit Fitness</span><em class="sw-win-time"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>2 min</em></div>
+                <div class="sw-win-body">
+                  <div class="sw-side"><i></i><i></i><i></i><i></i></div>
+                  <div class="sw-rows">
+                    <div class="sw-row"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg><b>Invite</b><i class="sw-done"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></div>
+                    <div class="sw-row"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="3.5" width="7" height="9" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.5"/><rect x="13.5" y="11.5" width="7" height="9" rx="1.5"/><rect x="3.5" y="15.5" width="7" height="5" rx="1.5"/></svg><b>Dashboard</b><i class="sw-done"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></div>
+                    <div class="sw-row sw-row-hi"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.1 6.1a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8.2" cy="8.2" r="1.5"/></svg><b>Plans</b><span class="sw-ready">Ready</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="sw-cap"><b>Set up</b><span>Dashboard ready in about 2 minutes.</span></p>
+          </div>
+
+          <!-- 03 Install: our controller and keypad go on the door -->
+          <div class="sw-scene sw-s-install">
+            <div class="sw-art">
+              <svg class="sw-door" viewBox="0 0 300 172" focusable="false">
+                <path class="sw-d-floor" d="M8 166.5h284"/>
+                <rect class="sw-d-frame" x="54" y="18" width="98" height="148.5" rx="3"/>
+                <rect class="sw-d-leaf" x="61" y="25" width="84" height="141.5" rx="2"/>
+                <rect class="sw-d-pane" x="74" y="40" width="58" height="42" rx="2"/>
+                <path class="sw-d-handle" d="M139 103h-13"/>
+                <circle class="sw-d-knob" cx="139" cy="103" r="3.6"/>
+                <rect class="sw-d-strike" x="147" y="89" width="5" height="28" rx="1.5"/>
+                <path class="sw-d-wire sw-d-w1" pathLength="1" d="M190 47h-18v56h-17"/>
+                <path class="sw-d-wire sw-d-w2" pathLength="1" d="M220 66v18"/>
+                <g class="sw-d-ctrl">
+                  <rect x="190" y="28" width="60" height="38" rx="6"/>
+                  <circle class="sw-d-dot" cx="202" cy="40" r="2.6"/><circle class="sw-d-dot" cx="211" cy="40" r="2.6"/><circle class="sw-d-dot" cx="220" cy="40" r="2.6"/>
+                  <path d="M201 54h38"/>
+                </g>
+                <g class="sw-d-pad">
+                  <rect x="198" y="84" width="44" height="70" rx="8"/>
+                  <circle class="sw-d-led" cx="220" cy="96" r="3.6"/>
+                  <g class="sw-d-keys">
+                    <circle cx="209" cy="110" r="2.5"/><circle cx="220" cy="110" r="2.5"/><circle cx="231" cy="110" r="2.5"/>
+                    <circle cx="209" cy="120" r="2.5"/><circle cx="220" cy="120" r="2.5"/><circle cx="231" cy="120" r="2.5"/>
+                    <circle cx="209" cy="130" r="2.5"/><circle cx="220" cy="130" r="2.5"/><circle cx="231" cy="130" r="2.5"/>
+                    <circle cx="220" cy="140" r="2.5"/>
+                  </g>
+                </g>
+                <g class="sw-d-badge">
+                  <circle cx="250" cy="86" r="13"/>
+                  <path d="M244 86.5l4 4 7.5-8"/>
+                </g>
+              </svg>
+              <div class="sw-chips sw-tags">
+                <span class="sw-chip"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 10h.01M11 10h.01M8 14h8"/></svg>Provisioned<i class="sw-tick"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></span>
+                <span class="sw-chip"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M7 10h3V7L6.5 3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1-3 3l-6-6a6 6 0 0 1-8-8z"/></svg>Installed<i class="sw-tick"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i></span>
+              </div>
+            </div>
+            <p class="sw-cap"><b>Install</b><span>We install your door controller.</span></p>
+          </div>
+
+          <!-- 04 Invite: members join from the link, paid members get in -->
+          <div class="sw-scene sw-s-invite">
+            <div class="sw-art">
+              <div class="sw-card sw-join">
+                <span class="sw-join-ic"><svg class="fq-ic" viewBox="0 0 24 24" focusable="false"><path d="M9 15l6-6M11 6l.5-.5a5 5 0 0 1 7 7l-.5.5M13 18l-.4.5a5 5 0 0 1-7-7l.5-.5"/></svg></span>
+                <span class="sw-join-txt"><small>Summit Fitness</small><b>Join link</b></span>
+                <span class="sw-share">Share</span>
+              </div>
+              <span class="sw-dash"></span>
+              <div class="sw-mems">
+                <div class="sw-card sw-mem"><span class="sw-ava">DW</span><b>Dana W.</b><span class="sw-pill sw-pill-sky">Paid</span><span class="sw-pill sw-pill-ok">In</span></div>
+                <div class="sw-card sw-mem"><span class="sw-ava">GV</span><b>Grant V.</b><span class="sw-pill sw-pill-sky">Paid</span><span class="sw-pill sw-pill-ok">In</span></div>
+                <div class="sw-card sw-mem"><span class="sw-ava">MI</span><b>Maya I.</b><span class="sw-pill sw-pill-sky">Paid</span><span class="sw-pill sw-pill-ok">In</span></div>
+              </div>
+            </div>
+            <p class="sw-cap"><b>Invite</b><span>Members join from your link.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sr-home-9" class="block fa" aria-labelledby="fa-title">
+    <div class="wrap fa-wrap">
+      <span class="fa-mark" aria-hidden="true"><svg viewBox="0 0 16 24" focusable="false"><path d="M8 1.5v21M2.5 8h11"/></svg></span>
+      <p class="eyebrow fa-eyebrow">Verse of the week</p>
+      <h2 class="fa-title" id="fa-title">Exercise your faith.</h2>
+      <div class="fa-show">
+        <div class="fa-stage">
+          <figure class="fa-verse" data-ref="Philippians 4:13">
+            <blockquote class="fa-text"><p>I can do all things through Christ which strengtheneth me.</p></blockquote>
+            <figcaption class="fa-ref">Philippians 4:13 · KJV</figcaption>
+          </figure>
+          <figure class="fa-verse" data-ref="Isaiah 40:31" hidden>
+            <blockquote class="fa-text"><p>But they that wait upon the <span class="fa-sc">Lord</span> shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.</p></blockquote>
+            <figcaption class="fa-ref">Isaiah 40:31 · KJV</figcaption>
+          </figure>
+          <figure class="fa-verse" data-ref="1 Corinthians 6:20" hidden>
+            <blockquote class="fa-text"><p>For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God's.</p></blockquote>
+            <figcaption class="fa-ref">1 Corinthians 6:20 · KJV</figcaption>
+          </figure>
+          <figure class="fa-verse" data-ref="Joshua 1:9" hidden>
+            <blockquote class="fa-text"><p>Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the <span class="fa-sc">Lord</span> thy God is with thee whithersoever <span class="fa-nw">thou goest.</span></p></blockquote>
+            <figcaption class="fa-ref">Joshua 1:9 · KJV</figcaption>
+          </figure>
+        </div>
+      </div>
+      <p class="fa-note">Members get a new verse every week in the app.</p>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem)">Ready to put your gym in your pocket?</h2>
+      <a class="btn btn-primary" href="book-a-trial.html">Book a trial</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:12px;align-content:start">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="" width="32" height="32">MyGymFitness</a>
+      <p>Membership, classes, workouts, and door access in one place.</p>
+    </div>
+    <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="owners.html">For gym owners</a></li></ul></div>
+    <div><h4>Gym owners</h4><ul><li><a href="book-a-trial.html">Book a trial</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+    <div><h4>Members</h4><ul><li><a href="https://app.mygymfitness.us" target="_blank" rel="noopener">Log in</a></li><li><a href="contact.html">Contact us</a></li><li><a href="https://app.mygymfitness.us/join" target="_blank" rel="noopener">Join a gym</a></li><li><a href="https://app.mygymfitness.us/privacy" target="_blank" rel="noopener">Privacy</a></li><li><a href="https://app.mygymfitness.us/terms" target="_blank" rel="noopener">Terms</a></li></ul></div>
+    <p class="legal">© 2026 LeanBizSolutions LLC. MyGymFitness is operated by LeanBizSolutions LLC.</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
