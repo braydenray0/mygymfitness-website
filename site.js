@@ -1029,15 +1029,19 @@
     data._subject = subject; data._template = 'table'; data._captcha = 'false';
     if (btn) { btn.disabled = true; btn.setAttribute('data-label', btn.textContent); btn.textContent = 'Sending…'; }
     say('var(--muted)', 'Sending…');
-    fetch('https://formsubmit.co/ajax/' + TO, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
-      .then(function (r) { return r.json(); })
+    // FormSubmit can take most of a minute to answer (Brayden's first live test, 2026-10-22, sat on "Sending…"), so say so
+    // after a few seconds, and give up after 75 so the button never hangs.
+    var slow = setTimeout(function () { say('var(--muted)', 'Still sending. This can take up to a minute.'); }, 12000);
+    var ctl = window.AbortController ? new AbortController() : null, cap = ctl && setTimeout(function () { ctl.abort(); }, 75000);
+    fetch('https://formsubmit.co/ajax/' + TO, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data), signal: ctl ? ctl.signal : undefined })
+      .then(function (r) { clearTimeout(slow); clearTimeout(cap); return r.json(); })
       .then(function (d) {
         if (String(d.success) !== 'true') throw new Error(d.message || 'not sent');
         form.reset();
         [].forEach.call(form.querySelectorAll('select'), function (s) { s.dispatchEvent(new Event('change')); });
         say('var(--ok)', 'Thanks, ' + name + '. We got it and will be in touch soon.');
       })
-      .catch(function () { say('var(--deny)', 'That didn’t send. Please try again, or email us at ' + TO + '.'); })
+      .catch(function () { clearTimeout(slow); clearTimeout(cap); say('var(--deny)', 'That didn’t send. Please try again, or email us at ' + TO + '.'); })
       .then(function () { if (btn) { btn.disabled = false; btn.textContent = btn.getAttribute('data-label'); } });
   };
 })();
