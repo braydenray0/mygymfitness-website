@@ -288,6 +288,8 @@ section.block.page-top { padding-top: 72px; }
 
 
 
+
+
 /* HIW-START */
 /* How it works: three steps, each a small built graphic in the app's style, a title and one line */
 .hiw-head { display: grid; gap: 14px; max-width: 760px; margin-bottom: 44px; }
@@ -1902,7 +1904,8 @@ section.block.hw-own { padding-block: 88px 100px; background: radial-gradient(70
 section.block.lg { --lh: 128px; --lg-gap: 104px; padding-top: 24px; overflow: hidden; }
 .lg .block-head { margin-bottom: 44px; }
 .lg-marquee { overflow: hidden; padding-block: 16px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
-.lg-track { display: flex; width: max-content; animation: lg-scroll 40s linear infinite; }
+/* 52s and 39s keep the speed it had with ten logos now that there are thirteen (Brayden, 2026-10-23) */
+.lg-track { display: flex; width: max-content; animation: lg-scroll 52s linear infinite; }
 .lg-set { flex: none; display: flex; align-items: center; gap: var(--lg-gap); margin: 0; padding: 0 var(--lg-gap) 0 0; list-style: none; }
 .lg-set li { flex: none; height: var(--lh); display: grid; place-items: center; }
 .lg-set img { display: block; width: auto; height: calc(var(--lh) * var(--k, 1)); opacity: .85; transition: opacity .25s ease, transform .25s ease; }
@@ -1912,10 +1915,10 @@ section.block.lg { --lh: 128px; --lg-gap: 104px; padding-top: 24px; overflow: hi
 @media (max-width: 639px) {
   section.block.lg { --lh: 88px; --lg-gap: 60px; }
   .lg .block-head { margin-bottom: 32px; }
-  .lg-track { animation-duration: 30s; }
+  .lg-track { animation-duration: 39s; }
   .lg-marquee { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
 }
-/* no motion: the ten logos simply sit in centred rows */
+/* no motion: the logos simply sit in centred rows */
 @media (prefers-reduced-motion: reduce) {
   .lg-track { width: auto; animation: none; }
   .lg-set { flex: 1; flex-wrap: wrap; justify-content: center; row-gap: 40px; padding: 0 20px; }
