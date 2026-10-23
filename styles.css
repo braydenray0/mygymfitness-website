@@ -1904,8 +1904,8 @@ section.block.hw-own { padding-block: 88px 100px; background: radial-gradient(70
 section.block.lg { --lh: 128px; --lg-gap: 104px; padding-top: 24px; overflow: hidden; }
 .lg .block-head { margin-bottom: 44px; }
 .lg-marquee { overflow: hidden; padding-block: 16px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
-/* 52s and 39s keep the speed it had with ten logos now that there are thirteen (Brayden, 2026-10-23) */
-.lg-track { display: flex; width: max-content; animation: lg-scroll 52s linear infinite; }
+/* 40s and 30s per set (Brayden, 2026-10-23: "make it go a bit faster"); ls/ls.js takes over from this animation */
+.lg-track { display: flex; width: max-content; animation: lg-scroll 40s linear infinite; }
 .lg-set { flex: none; display: flex; align-items: center; gap: var(--lg-gap); margin: 0; padding: 0 var(--lg-gap) 0 0; list-style: none; }
 .lg-set li { flex: none; height: var(--lh); display: grid; place-items: center; }
 .lg-set img { display: block; width: auto; height: calc(var(--lh) * var(--k, 1)); opacity: .85; transition: opacity .25s ease, transform .25s ease; }
@@ -1915,7 +1915,7 @@ section.block.lg { --lh: 128px; --lg-gap: 104px; padding-top: 24px; overflow: hi
 @media (max-width: 639px) {
   section.block.lg { --lh: 88px; --lg-gap: 60px; }
   .lg .block-head { margin-bottom: 32px; }
-  .lg-track { animation-duration: 39s; }
+  .lg-track { animation-duration: 30s; }
   .lg-marquee { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
 }
 /* no motion: the logos simply sit in centred rows */
@@ -2514,6 +2514,17 @@ section.ft.ft-recap + section.block.dl { padding-top: 88px; }
 /* FM-START */
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 /* FM-END */
+
+/* LS-START */
+/* Partners strip you can move yourself (Brayden, 2026-10-23, ls.js): the strip scrolls for real, with no scrollbar showing,
+   a hand cursor for dragging, and no image ghost or text selection while dragging. */
+.lg-marquee.lg-js { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; scroll-behavior: auto; overscroll-behavior-x: contain; cursor: grab; -webkit-user-select: none; user-select: none; }
+.lg-marquee.lg-js::-webkit-scrollbar { display: none; }
+.lg-marquee.lg-js .lg-track { animation: none; }
+.lg-marquee.lg-js.lg-grab { cursor: grabbing; }
+.lg-marquee.lg-js.lg-grab .lg-set li:hover img { transform: none; }
+.lg-set img { -webkit-user-drag: none; }
+/* LS-END */
 
 /* SR-START */
 /* Site search (Brayden, 2026-10-20): magnifier button beside the menu button, search box over the page.

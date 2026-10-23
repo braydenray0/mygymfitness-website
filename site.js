@@ -1046,6 +1046,70 @@
   };
 })();
 // FM-END
+// LS-START: partner logo strip you can scroll yourself
+(function () {
+  // Brayden, 2026-10-23: "make it go a bit faster and make it to where you can scroll through them if you want to". The
+  // partner strip becomes a real horizontal scroller that this script moves along (a set every 40s, 30s on phones, about a
+  // third faster than before), so people can also swipe it, drag it with the mouse, or scroll it sideways on a trackpad.
+  // It waits while the mouse is over it or someone is moving it, then carries on. A third copy of the logos sits in front, so
+  // it loops both ways without a visible jump. With reduced motion none of this runs and the logos sit in rows.
+  if (!window.requestAnimationFrame || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  [].forEach.call(document.querySelectorAll('.lg-marquee'), function (box) {
+    var track = box.querySelector('.lg-track'), sets = track && track.querySelectorAll('.lg-set');
+    if (!sets || sets.length < 2) return;
+    var first = sets[0], lead = sets[1].cloneNode(true);
+    track.insertBefore(lead, first);                       // copy, logos, copy: room to move both ways
+    box.classList.add('lg-js');
+    [].forEach.call(track.querySelectorAll('img'), function (im) { im.setAttribute('draggable', 'false'); });
+    var W = 0, pos = 0, placed = false, hover = false, drag = null, touching = false, lastUser = -1e9, seen = true, last = 0;
+    function measure() {
+      var w = first.offsetLeft - lead.offsetLeft;
+      if (w > 0 && w !== W) { var k = W ? (pos - W) / W : 0; W = w; pos = W + k * W; placed = true; set(); }
+    }
+    function wrap() {                                      // the strip repeats every W, so jumping a whole W looks the same
+      var d = 0;
+      if (pos >= 2 * W) d = -W; else if (pos < W / 2) d = W;
+      pos += d; if (drag) drag.from += d;
+    }
+    function set() { box.scrollLeft = pos; }
+    function busy(now) { return hover || drag || touching || now - lastUser < 2500; }
+    box.addEventListener('scroll', function () {           // a swipe, a trackpad or the keyboard moved it
+      if (!placed || Math.abs(box.scrollLeft - pos) < 2) return;
+      pos = box.scrollLeft; lastUser = performance.now();
+      var before = pos; wrap(); if (pos !== before) set();
+    }, { passive: true });
+    // only a real mouse pauses it on hover: a tap on a phone can leave a hover behind that never ends
+    box.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') hover = true; });
+    box.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') hover = false; });
+    box.addEventListener('touchstart', function () { touching = true; }, { passive: true });
+    box.addEventListener('touchend', function () { touching = false; lastUser = performance.now(); }, { passive: true });
+    box.addEventListener('touchcancel', function () { touching = false; lastUser = performance.now(); }, { passive: true });
+    box.addEventListener('pointerdown', function (e) {    // mouse: grab and drag (touch scrolls natively)
+      if (e.pointerType !== 'mouse' || e.button !== 0 || !placed) return;
+      drag = { x: e.clientX, from: pos }; box.classList.add('lg-grab'); e.preventDefault();
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      pos = drag.from - (e.clientX - drag.x); wrap(); set();
+    });
+    function end() { drag = null; box.classList.remove('lg-grab'); lastUser = performance.now(); }
+    window.addEventListener('pointerup', function () { if (drag) end(); });
+    window.addEventListener('blur', function () { if (drag) end(); });
+    if (window.IntersectionObserver) new IntersectionObserver(function (es) { seen = es[es.length - 1].isIntersecting; }).observe(box);
+    if (window.ResizeObserver) new ResizeObserver(measure).observe(track); else window.addEventListener('resize', measure);
+    function tick(now) {
+      var dt = last ? Math.min(now - last, 100) : 0; last = now;
+      if (!W) measure();
+      if (W && seen && !busy(now)) {
+        pos += W / (innerWidth < 640 ? 30 : 40) * dt / 1000;
+        wrap(); set();
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+})();
+// LS-END
 // SR-START: site search
 /* Site search (Brayden, 2026-10-20): the magnifier in the top bar opens a search box; results show as you type and
    take you to the spot, opening the FAQ answer, Key Features slide or Owners tile it points at.
