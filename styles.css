@@ -290,6 +290,8 @@ section.block.page-top { padding-top: 72px; }
 
 
 
+
+
 /* HIW-START */
 /* How it works: three steps, each a small built graphic in the app's style, a title and one line */
 .hiw-head { display: grid; gap: 14px; max-width: 760px; margin-bottom: 44px; }

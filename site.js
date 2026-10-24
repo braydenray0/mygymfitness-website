@@ -65,7 +65,7 @@
     li.innerHTML = '<time>' + stamp(mins) + '</time><span class="who">' + p + '<span class="why">' + k[2] + '</span></span><span class="tag ' + k[0] + '">' + k[1] + '</span>';
     log.insertBefore(li, log.firstChild);
     if (log.children.length > 4) log.removeChild(log.lastElementChild);
-  }, 3000);
+  }, window.innerWidth < 640 ? 1500 : 1800);   // Brayden, 2026-10-24: "a bit faster" (was every 3s)
 })();
 
 // Sales alerts cycling over the Overview phone (wording follows the app's real alerts).
@@ -114,7 +114,7 @@
 // A rail of the nine feature names beside one big stage. The static HTML is a plain list of nine cards (readable without
 // JS, no dead controls). This script builds the rail (dots under the stage on phones), the arrows, the pause/play
 // button and a polite live region, and adds .ks-on. The arrows, keys and swipes go round (9 to 1), like the autoplay.
-// Autoplay moves on every 4 s while the stage is on screen; it pauses while hovered, focused or touched, off screen or
+// Autoplay moves on every 3 s (2.5 s on phones; Brayden, 2026-10-24: "kinda slow") while the stage is on screen; it pauses while hovered, focused or touched, off screen or
 // when the tab is hidden, stops for good once the visitor moves the slider themselves, and never runs under reduced motion.
 // Nothing is measured: the layout is CSS only, so a page that starts hidden shows the right slide once shown. The rail
 // and dots follow the slide count (--ks-n for ks.css), so the script works for any number of slides.
@@ -131,7 +131,8 @@
     var N = slides.length;
     if (N < 2) return;
 
-    var DUR = 4000;
+    var phone = window.matchMedia ? window.matchMedia('(max-width: 639px)') : null;
+    function dur() { return phone && phone.matches ? 2500 : 3000; }
     var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
     var reduced = !!(mq && mq.matches);
     var CHEV = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5.5 8.5 12l6.5 6.5"/></svg>';
@@ -227,7 +228,7 @@
     var cAF = window.cancelAnimationFrame || clearTimeout;
 
     function paint() {
-      var p = mode === 'stopped' ? 1 : Math.max(0, Math.min(1, elapsed / DUR));
+      var p = mode === 'stopped' ? 1 : Math.max(0, Math.min(1, elapsed / dur()));
       for (var k = 0; k < N; k++) fills[k].style.transform = 'scaleX(' + (k === cur ? p : 0) + ')';
     }
 
@@ -270,7 +271,7 @@
       var t = now();
       elapsed += Math.min(100, Math.max(0, t - last));
       last = t;
-      if (elapsed >= DUR) { show(wrap(cur + 1), 1); live.textContent = ''; }   // never announced; drop an old announcement
+      if (elapsed >= dur()) { show(wrap(cur + 1), 1); live.textContent = ''; }   // never announced; drop an old announcement
       else paint();
       raf = rAF(frameTick);
     }
@@ -333,11 +334,14 @@
       if (!playFocus) playUsed = false;
       sync();
     });
-    root.addEventListener('focusin', function (e) { playFocus = e.target === play; focused = !playFocus; sync(); });
+    // Focus on the section's heading is not someone using the slider: the preview moves focus there when it opens the
+    // page, which used to hold the slideshow until the next tap somewhere else.
+    function holds(t) { return !!t && t !== play && root.contains(t) && !/^H[1-6]$/.test(t.tagName); }
+    root.addEventListener('focusin', function (e) { playFocus = e.target === play; focused = holds(e.target); sync(); });
     root.addEventListener('focusout', function (e) {
       var to = e.relatedTarget;
       playFocus = to === play;
-      focused = !!(to && to !== play && root.contains(to));
+      focused = holds(to);
       if (!playFocus && !playHover) playUsed = false;
       sync();
     });
