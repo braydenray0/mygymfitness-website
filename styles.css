@@ -2536,8 +2536,12 @@ section.ft.ft-recap + section.block.dl { padding-top: 88px; }
    row, and slightly tighter rows keep the slider as tall as before with the fourth row. */
 .hx-cal { --cal-p: #a855f7; gap: 5px; }
 .hx-cal i.hx-cal-p { background: var(--cal-p); }
-.hx-cal-keys { display: flex; gap: 4px; }
-.hx-cal-keys .hx-cal-key { flex: 1 1 auto; gap: 4px; padding: 3px 6px; font-size: .64rem; }
+/* Brayden, 2026-10-27: "its all pushed to the right so its sticking out". The chip row was a hair wider than the card, so
+   it stretched the calendar's one column and everything ran past the right edge (worse with an iPhone's wider font).
+   The column can no longer grow, and the chips are a little smaller with room to spare; a chip clips before it can push. */
+.hx-cal { grid-template-columns: minmax(0, 1fr); }
+.hx-cal-keys { display: flex; gap: 3px; min-width: 0; }
+.hx-cal-keys .hx-cal-key { flex: 1 1 auto; min-width: 0; overflow: hidden; gap: 3px; padding: 3px 4px; font-size: .6rem; }
 .hx-cal-row { min-height: 25px; padding-block: 2px; }
 /* PT-END */
 
