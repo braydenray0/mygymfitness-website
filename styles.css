@@ -292,6 +292,8 @@ section.block.page-top { padding-top: 72px; }
 
 
 
+
+
 /* HIW-START */
 /* How it works: three steps, each a small built graphic in the app's style, a title and one line */
 .hiw-head { display: grid; gap: 14px; max-width: 760px; margin-bottom: 44px; }
@@ -2527,6 +2529,17 @@ section.ft.ft-recap + section.block.dl { padding-top: 88px; }
 .lg-marquee.lg-js.lg-grab .lg-set li:hover img { transform: none; }
 .lg-set img { -webkit-user-drag: none; }
 /* LS-END */
+
+/* PT-START */
+/* Class calendar on Features (Brayden, 2026-10-27: every calendar shows all four kinds): Classes blue, Workouts orange,
+   Nutrition green and PT purple, the app's own colors (CalendarPage.tsx). Four chips sized to their words fit in one
+   row, and slightly tighter rows keep the slider as tall as before with the fourth row. */
+.hx-cal { --cal-p: #a855f7; gap: 5px; }
+.hx-cal i.hx-cal-p { background: var(--cal-p); }
+.hx-cal-keys { display: flex; gap: 4px; }
+.hx-cal-keys .hx-cal-key { flex: 1 1 auto; gap: 4px; padding: 3px 6px; font-size: .64rem; }
+.hx-cal-row { min-height: 25px; padding-block: 2px; }
+/* PT-END */
 
 /* SR-START */
 /* Site search (Brayden, 2026-10-20): magnifier button beside the menu button, search box over the page.
